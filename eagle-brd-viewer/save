@@ -1,0 +1,22 @@
+#if 0
+void
+Canvas::paintEvent(QPaintEvent *event)
+{
+  QPainter painter(this);
+  painter.setBrush(QBrush(Qt::green, Qt::SolidPattern));
+  painter.setPen(QPen(Qt::green, 1, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
+  
+  painter.setRenderHint(QPainter::Antialiasing, true);
+  
+  painter.drawLine(50,50,100,150);
+  
+  // printf ("%d, %d\n", width() - 1, height() - 1);
+  // painter.drawRect(QRect(0, 0, width() - 1, height() - 1));  
+}
+
+void
+Canvas::mouseMoveEvent(QMouseEvent *event)
+{
+  std::cout << "mouse event " << event->x() << ", " << event->y() << "\n";
+}
+#endif
